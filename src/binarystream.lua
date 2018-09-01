@@ -202,7 +202,6 @@ function BinaryStream:writeVarS32(value)
 	assert(value > -(2 ^ 31) and value < 2 ^ 31, "Exceeded S32 value range")
 
 	if value < 0 then
-		print(value)
 		value = bor(shl(-value, 1), 0x00000001)
 	else
 		value = shl(value, 1)
